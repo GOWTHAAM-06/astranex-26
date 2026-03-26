@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Committee from "@/components/Committee";
 import Events from "@/components/Events";
 import Achievements from "@/components/Achievements";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Committee />
       <Events />
       <Achievements />
+      <Contact />
     </main>
   );
 }
