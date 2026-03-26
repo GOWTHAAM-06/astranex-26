@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Committee from "@/components/Committee";
 import Events from "@/components/Events";
+import Achievements from "@/components/Achievements";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Committee />
       <Events />
+      <Achievements />
     </main>
   );
 }
