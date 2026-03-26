@@ -57,14 +57,43 @@ export default function Hero() {
           0%, 100% { opacity: 0.15; transform: scale(1); }
           50% { opacity: 0.3; transform: scale(1.1); }
         }
-        .hero-badge { opacity: 0; animation: fadeUp 1s ease forwards 0.2s; }
-        .hero-title { opacity: 0; animation: fadeUp 1s ease forwards 0.5s; }
-        .hero-tagline { opacity: 0; animation: fadeUp 1s ease forwards 0.8s; }
-        .hero-divider { opacity: 0; animation: fadeUp 1s ease forwards 1s; }
-        .hero-sub { opacity: 0; animation: fadeUp 1s ease forwards 1.1s; }
-        .hero-quote { opacity: 0; animation: fadeUp 1s ease forwards 1.4s; }
-        .hero-cta { opacity: 0; animation: fadeUp 1s ease forwards 1.6s; }
-        .hero-stats { opacity: 0; animation: fadeUp 1s ease forwards 1.8s; }
+        .hero-badge {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 0.2s;
+        }
+        .hero-title {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 0.5s;
+        }
+        .hero-tagline {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 0.8s;
+        }
+        .hero-divider {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 1s;
+        }
+        .hero-sub {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 1.1s;
+        }
+        .hero-quote {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 1.4s;
+        }
+        .hero-cta {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 1.6s;
+        }
+        .hero-stats {
+          opacity: 0;
+          animation: fadeUp 1s ease forwards 1.8s;
+          display: flex;
+          gap: 48px;
+          margin-top: 60px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
         .hero-btn-primary {
           font-family: var(--font-orbitron);
           font-size: 12px;
@@ -104,13 +133,32 @@ export default function Hero() {
           background: rgba(99,179,255,0.08);
           transform: translateY(-2px);
         }
+
+        /* MOBILE STYLES */
+        @media (max-width: 768px) {
+          .hero-badge {
+            font-size: 9px !important;
+            letter-spacing: 1px !important;
+            padding: 6px 10px !important;
+            text-align: center !important;
+            max-width: 260px !important;
+            line-height: 1.6 !important;
+          }
+          .hero-stats {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 20px !important;
+            width: 100% !important;
+          }
+          .hero-btn-primary, .hero-btn-secondary {
+            padding: 12px 20px !important;
+            font-size: 10px !important;
+          }
+        }
       `}</style>
 
       {/* Stars */}
-      <div
-        ref={starsRef}
-        style={{ position: "absolute", inset: 0, zIndex: 0 }}
-      />
+      <div ref={starsRef} style={{ position: "absolute", inset: 0, zIndex: 0 }} />
 
       {/* Grid */}
       <div style={{
@@ -186,6 +234,7 @@ export default function Hero() {
             background: "rgba(99,179,255,0.05)",
             marginBottom: "28px",
             textTransform: "uppercase",
+            textAlign: "center",
           }}
         >
           ◈ Dept. of CSE · IT · Cyber Security · AI&DS ◈
@@ -196,7 +245,7 @@ export default function Hero() {
           className="hero-title"
           style={{
             fontFamily: "var(--font-orbitron)",
-            fontSize: "clamp(42px, 8vw, 80px)",
+            fontSize: "clamp(36px, 8vw, 80px)",
             fontWeight: 900, color: "#ffffff",
             textAlign: "center", lineHeight: 1.05,
             letterSpacing: "6px",
@@ -212,7 +261,7 @@ export default function Hero() {
           className="hero-tagline"
           style={{
             fontFamily: "var(--font-share-tech)",
-            fontSize: "clamp(13px, 2vw, 16px)",
+            fontSize: "clamp(11px, 2vw, 16px)",
             color: "rgba(255,255,255,0.55)",
             letterSpacing: "4px", textAlign: "center",
             marginTop: "16px", textTransform: "uppercase",
@@ -268,23 +317,12 @@ export default function Hero() {
             justifyContent: "center",
           }}
         >
-          <a href="#about" className="hero-btn-primary">
-            Explore the Mission
-          </a>
-          <a href="#committee" className="hero-btn-secondary">
-            Meet the Crew
-          </a>
+          <a href="#about" className="hero-btn-primary">Explore the Mission</a>
+          <a href="#committee" className="hero-btn-secondary">Meet the Crew</a>
         </div>
 
         {/* Stats */}
-        <div
-          className="hero-stats"
-          style={{
-            display: "flex", gap: "48px",
-            marginTop: "60px", flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
+        <div className="hero-stats">
           {[
             { num: "60+", label: "Crew Members" },
             { num: "4", label: "Missions Launched" },
