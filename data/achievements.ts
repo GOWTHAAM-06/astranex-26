@@ -1,0 +1,55 @@
+export const stats = [
+  {
+    id: "n1",
+    number: 60,
+    suffix: "+",
+    label: "Students\nParticipated",
+    icon: "👥",
+    accent: "#63b3ff",
+    glow: "rgba(99,179,255,0.5)",
+  },
+  {
+    id: "n2",
+    number: 27,
+    suffix: "",
+    label: "Certificates\nAwarded",
+    icon: "🏆",
+    accent: "#a78bfa",
+    glow: "rgba(167,139,250,0.5)",
+  },
+  {
+    id: "n3",
+    number: 4,
+    suffix: "",
+    label: "Missions\nLaunched",
+    icon: "🎯",
+    accent: "#34d399",
+    glow: "rgba(52,211,153,0.5)",
+  },
+  {
+    id: "n4",
+    number: 4,
+    suffix: "",
+    label: "Departments\nUnited",
+    icon: "🌐",
+    accent: "#fb923c",
+    glow: "rgba(251,146,60,0.5)",
+  },
+  {
+    id: "n5",
+    number: 16,
+    suffix: "",
+    label: "Core Crew\nMembers",
+    icon: "🚀",
+    accent: "#f472b6",
+    glow: "rgba(244,114,182,0.5)",
+  },
+];
+
+export const statements = [
+  "Two associations tried before us. Both fell. We're still standing — and we're just getting started.",
+  "100% self-funded. Every rupee came from the crew. Our HOD mam believed in us before anyone else did.",
+  "Some submissions were so extraordinary, the standards had to be raised. That's the kind of crew we have.",
+  "Management attended. Witnessed. And left expecting even greater things. That's not pressure. That's recognition.",
+  "From day one, we showed up differently. Not just in what we said — but in how we carried ourselves.",
+];
