@@ -1,10 +1,4 @@
-‎
--35
-Lines changed: 0 additions & 35 deletions
 
-
-Original file line number	Diff line number	Diff line change
-@@ -1,36 +1 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
