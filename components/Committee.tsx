@@ -319,7 +319,7 @@ export default function Committee() {
                     color: "#63b3ff", padding: "3px 8px",
                     borderRadius: "10px", textTransform: "uppercase",
                   }}>
-                    You
+                    Developer
                   </div>
                 )}
                 <span style={{ fontSize: "22px", marginBottom: "10px", display: "block" }}>
