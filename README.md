@@ -1,28 +1,38 @@
+# ◈ ASTRANEX '26 ◈
+### Tactical Event Interface | SRG Engineering College
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+> **"Every Skill Has a Stage. This is the Command Center."**
 
-## Getting Started
-First, run the development server:
+A high-fidelity, "Dark Tech" digital interface built for the ASTRANEX'26 Symposium. This platform serves as the central hub for mission-critical event data, crew coordination, and participant engagement.
+
+---
+
+## 🛠️ THE STACK (CORE SYSTEMS)
+This project is engineered with a bleeding-edge tactical stack for maximum performance and visual density:
+
+* **Framework:** Next.js 15.3 (App Router)
+* **Engine:** React 19.2
+* **Styling:** Tailwind CSS v4 (High-Performance CSS Engine)
+* **Motion:** Framer Motion 12.0 (Tactical Transitions)
+* **Icons:** Lucide React (Vector Intelligence)
+* **Language:** TypeScript (Strict Mission Logic)
+
+---
+
+## ⚡ MISSION FEATURES
+* **Adaptive Grid System:** A custom-engineered CSS grid with neon-glow motifs.
+* **Tactical Crew Modals:** Interactive "Mission Files" for every committee operative.
+* **Scroll-Driven Intelligence:** Optimized visibility triggers for seamless data revelation.
+* **Glassmorphic UI:** High-contrast digital circuitry aesthetic for the "Dark Tech" feel.
+
+---
+
+## 🚀 DEPLOYMENT & COMMANDS
+To initialize the local development environment:
+
 ```bash
+# Install dependencies
+npm install
+
+# Start the tactical interface
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-## Learn More
-To learn more about Next.js, take a look at the following resources:
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-## Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-0 commit comments
-Comments
-0
