@@ -5,11 +5,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 type CrewMember = {
   name: string;
-  position: string;
-  missionRole: string;
+  position?: string;
+  missionRole?: string;
+  role?: string;
   icon: string;
   year: string;
-  isVP: boolean;
+  isVP?: boolean;
+  isHighlighted?: boolean;
 };
 
 const profiles: Record<string, string> = {
@@ -20,6 +22,15 @@ const profiles: Record<string, string> = {
   "Karthiga Devi": "Bold in words. Sharp in decisions. Tactical when it matters most. The one who keeps the mission funded and the crew moving forward.",
   "Abivetrivelan": "Calm on the surface. Dangerous underneath. Best video editor in the crew — the kind of talent that makes standards rise. Unbothered by attention. Focused on output.",
   "Jiviya": "Still finding the path. But the hunger is real. Every great crew needs someone who is growing in real time — and she is exactly that.",
+  "Yamine": "The silent backbone behind this mission. When the code needed a machine, she gave hers. When the builder needed a ground, she was it. Some contributions are written in code. Hers is written in trust.",
+  "Akshaya": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Manoj": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Kavitha": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Mageshwari": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Kaviya": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Hariharan": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Dhaakshayani": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Suruthi": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
 };
 
 export default function Committee() {
@@ -69,31 +80,6 @@ export default function Committee() {
           border-color: #63b3ff !important;
           box-shadow: 0 16px 50px rgba(99,179,255,0.25) !important;
         }
-        .team-grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          max-width: 960px;
-          margin: 0 auto;
-          justify-content: center;
-        }
-        .team-pill {
-          font-family: var(--font-share-tech);
-          font-size: 11px;
-          letter-spacing: 1px;
-          color: rgba(255,255,255,0.5);
-          border: 1px solid rgba(99,179,255,0.15);
-          border-radius: 20px;
-          padding: 8px 16px;
-          background: rgba(255,255,255,0.02);
-          transition: all 0.3s;
-          cursor: default;
-        }
-        .team-pill:hover {
-          color: #63b3ff;
-          border-color: rgba(99,179,255,0.4);
-          background: rgba(99,179,255,0.05);
-        }
         .scan-line {
           position: absolute;
           bottom: 0; left: 0; right: 0;
@@ -111,7 +97,7 @@ export default function Committee() {
           position: fixed;
           inset: 0;
           background: rgba(2,4,8,0.92);
-          zIndex: 999;
+          z-index: 999;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -173,7 +159,6 @@ export default function Committee() {
       {selected && (
         <div
           className="modal-overlay"
-          style={{ zIndex: 999 }}
           onClick={() => setSelected(null)}
         >
           <div
@@ -187,7 +172,6 @@ export default function Committee() {
               ✕
             </button>
 
-            {/* Top accent */}
             <div style={{
               position: "absolute", top: 0, left: 0, right: 0,
               height: "2px", borderRadius: "20px 20px 0 0",
@@ -204,7 +188,7 @@ export default function Committee() {
               color: "#63b3ff", textTransform: "uppercase",
               marginBottom: "6px",
             }}>
-              {selected.position}
+              {selected.position || "Mission Team"}
             </div>
 
             <div style={{
@@ -222,7 +206,7 @@ export default function Committee() {
               letterSpacing: "2px", fontStyle: "italic",
               marginBottom: "8px",
             }}>
-              {selected.missionRole}
+              {selected.missionRole || selected.role}
             </div>
 
             <span style={{
@@ -319,7 +303,7 @@ export default function Committee() {
                     color: "#63b3ff", padding: "3px 8px",
                     borderRadius: "10px", textTransform: "uppercase",
                   }}>
-                    Developer
+                    Vice President
                   </div>
                 )}
                 <span style={{ fontSize: "22px", marginBottom: "10px", display: "block" }}>
@@ -382,10 +366,73 @@ export default function Committee() {
             ◈ Mission Team ◈
           </div>
 
-          <div className="team-grid">
+          <div className="crew-grid">
             {missionTeam.map((member) => (
-              <div key={member.name} className="team-pill">
-                {member.name} · {member.year}
+              <div
+                key={member.name}
+                className={`crew-card ${member.isHighlighted ? "crew-card-vp" : ""}`}
+                onClick={() => setSelected(member)}
+              >
+                {member.isHighlighted && <div className="scan-line" />}
+                {member.isHighlighted && (
+                  <div style={{
+                    position: "absolute", top: "12px", right: "12px",
+                    fontFamily: "var(--font-share-tech)",
+                    fontSize: "8px", letterSpacing: "2px",
+                    background: "rgba(99,179,255,0.15)",
+                    border: "1px solid rgba(99,179,255,0.4)",
+                    color: "#63b3ff", padding: "3px 8px",
+                    borderRadius: "10px", textTransform: "uppercase",
+                  }}>
+                    MVP
+                  </div>
+                )}
+                <span style={{ fontSize: "22px", marginBottom: "10px", display: "block" }}>
+                  {member.icon}
+                </span>
+                <div style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "9px", letterSpacing: "3px",
+                  color: "#63b3ff", textTransform: "uppercase",
+                  marginBottom: "6px",
+                }}>
+                  Mission Team
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-orbitron)",
+                  fontSize: "15px", fontWeight: 700,
+                  color: "#fff", marginBottom: "4px",
+                  letterSpacing: "1px",
+                }}>
+                  {member.name}
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "10px", color: "rgba(255,255,255,0.4)",
+                  letterSpacing: "1px", marginBottom: "10px",
+                  fontStyle: "italic",
+                }}>
+                  {member.role}
+                </div>
+                <span style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "9px",
+                  background: "rgba(99,179,255,0.1)",
+                  border: "1px solid rgba(99,179,255,0.2)",
+                  color: "#63b3ff", padding: "3px 8px",
+                  borderRadius: "20px", display: "inline-block",
+                  letterSpacing: "1px",
+                }}>
+                  {member.year}
+                </span>
+                <div style={{
+                  marginTop: "12px",
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "9px", color: "rgba(99,179,255,0.4)",
+                  letterSpacing: "1px",
+                }}>
+                  click to view profile →
+                </div>
               </div>
             ))}
           </div>

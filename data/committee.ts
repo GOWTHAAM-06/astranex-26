@@ -58,13 +58,13 @@ export const coreTeam = [
 ];
 
 export const missionTeam = [
-  { name: "Akshaya", year: "Final Year" },
-  { name: "Yamine", year: "3rd Year" },
-  { name: "Manoj", year: "2nd Year" },
-  { name: "Kavitha", year: "1st Year" },
-  { name: "Mageshwari", year: "1st Year" },
-  { name: "Kaviya", year: "3rd Year" },
-  { name: "Hariharan", year: "3rd Year" },
-  { name: "Dhaakshayani", year: "2nd Year" },
-  { name: "Suruthi", year: "2nd Year" },
+  { name: "Akshaya", year: "Final Year", icon: "⭐", role: "Mission Specialist" },
+  { name: "Yamine", year: "3rd Year", icon: "💻", role: "The Silent Backbone", isHighlighted: true },
+  { name: "Manoj", year: "2nd Year", icon: "🔧", role: "Mission Specialist" },
+  { name: "Kavitha", year: "1st Year", icon: "🌟", role: "Mission Specialist" },
+  { name: "Mageshwari", year: "1st Year", icon: "🌟", role: "Mission Specialist" },
+  { name: "Kaviya", year: "3rd Year", icon: "⭐", role: "Mission Specialist" },
+  { name: "Hariharan", year: "3rd Year", icon: "🔧", role: "Mission Specialist" },
+  { name: "Dhaakshayani", year: "2nd Year", icon: "🌟", role: "Mission Specialist" },
+  { name: "Suruthi", year: "2nd Year", icon: "🌟", role: "Mission Specialist" },
 ];
