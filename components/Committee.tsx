@@ -22,15 +22,14 @@ const profiles: Record<string, string> = {
   "Karthiga Devi": "Bold in words. Sharp in decisions. Tactical when it matters most. The one who keeps the mission funded and the crew moving forward.",
   "Abivetrivelan": "Calm on the surface. Dangerous underneath. Best video editor in the crew — the kind of talent that makes standards rise. Unbothered by attention. Focused on output.",
   "Jiviya": "Still finding the path. But the hunger is real. Every great crew needs someone who is growing in real time — and she is exactly that.",
-  "Yamine": "The silent backbone behind this mission. When the code needed a machine, she gave hers. When the builder needed a ground, she was it. Some contributions are written in code. Hers is written in trust.",
-  "Akshaya": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Manoj": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Kavitha": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Mageshwari": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Kaviya": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Hariharan": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Dhaakshayani": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
-  "Suruthi": "A vital part of the ASTRANEX'26 crew. Every mission needs every member.",
+  "Akshaya": "The Precision Specialist. Handles complexity with a focused lens. When the mission requires attention to detail that others miss, she's the one scanning the perimeter.",
+  "Manoj": "The Engine. High output, low ego. Every mission relies on the strength of its moving parts, and he keeps the gears turning without friction.",
+  "Kavitha": "The Logic Processor. Thinks in structures and sequences. A vital link in the chain that ensures the crew's vision translates into reality.",
+  "Mageshwari": "The Vanguard. Steps up when the pressure is highest. Reliability is her primary weapon, ensuring no mission objective is left behind.",
+  "Kaviya": "The Creative Intel. Sees the patterns others don't. Adds the layer of sophistication that separates a basic operation from an ASTRANEX-grade mission.",
+  "Hariharan": "The Technical Scout. Always looking for the next tool, the next edge. A builder who understands that a crew is only as strong as its technical foundation.",
+  "Dhaakshayani": "The Strategic Support. Manages the variables that keep the crew stable. Calm under fire and consistently effective in every tactical phase.",
+  "Suruthi": "The Integration Expert. Seamlessly bridges the gaps between different departments. Her presence ensures the mission remains a singular, unified force.",
 };
 
 export default function Committee() {
@@ -303,7 +302,7 @@ export default function Committee() {
                     color: "#63b3ff", padding: "3px 8px",
                     borderRadius: "10px", textTransform: "uppercase",
                   }}>
-                    Vice President
+                    Developer
                   </div>
                 )}
                 <span style={{ fontSize: "22px", marginBottom: "10px", display: "block" }}>
