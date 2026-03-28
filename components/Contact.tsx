@@ -1,4 +1,5 @@
 "use client";
+import ScrollReveal from "@/components/ScrollReveal"; // 👈 Added ScrollReveal Import
 
 export default function Contact() {
   return (
@@ -69,159 +70,162 @@ export default function Contact() {
       }} />
 
       <div style={{ position: "relative", zIndex: 2, maxWidth: "800px", width: "100%" }}>
+        <ScrollReveal delay={100}> {/* 👈 Opening ScrollReveal */}
 
-        {/* Header */}
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "11px", letterSpacing: "4px",
-          color: "#63b3ff", textAlign: "center",
-          textTransform: "uppercase", marginBottom: "12px",
-        }}>
-          ◈ Open Transmission ◈
-        </div>
-        <div style={{
-          fontFamily: "var(--font-orbitron)",
-          fontSize: "clamp(24px, 5vw, 42px)",
-          fontWeight: 900, color: "#fff",
-          textAlign: "center", letterSpacing: "4px",
-          marginBottom: "8px",
-          textShadow: "0 0 40px rgba(99,179,255,0.4)",
-        }}>
-          CONTACT
-        </div>
-        <div style={{
-          width: "80px", height: "1px",
-          background: "linear-gradient(90deg, transparent, #63b3ff, transparent)",
-          margin: "0 auto 16px",
-        }} />
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "12px", color: "rgba(255,255,255,0.3)",
-          textAlign: "center", letterSpacing: "2px",
-          marginBottom: "52px", textTransform: "uppercase",
-        }}>
-          SRG Engineering College · Namakkal
-        </div>
-
-        {/* Transmission card */}
-        <div style={{
-          background: "rgba(99,179,255,0.02)",
-          border: "1px dashed rgba(99,179,255,0.2)",
-          borderRadius: "16px", padding: "48px 32px",
-          textAlign: "center", marginBottom: "32px",
-        }}>
+          {/* Header */}
           <div style={{
-            fontSize: "36px", marginBottom: "20px",
-            display: "inline-block",
-            animation: "rotate 8s linear infinite",
+            fontFamily: "var(--font-share-tech)",
+            fontSize: "11px", letterSpacing: "4px",
+            color: "#63b3ff", textAlign: "center",
+            textTransform: "uppercase", marginBottom: "12px",
           }}>
-            📡
+            ◈ Open Transmission ◈
           </div>
           <div style={{
             fontFamily: "var(--font-orbitron)",
-            fontSize: "clamp(16px, 3vw, 24px)",
-            fontWeight: 700, color: "#fff",
-            letterSpacing: "2px", marginBottom: "16px",
+            fontSize: "clamp(24px, 5vw, 42px)",
+            fontWeight: 900, color: "#fff",
+            textAlign: "center", letterSpacing: "4px",
+            marginBottom: "8px",
+            textShadow: "0 0 40px rgba(99,179,255,0.4)",
           }}>
-            ASTRANEX&apos;26 is built by students,<br />
-            <span style={{ color: "#63b3ff" }}>for students.</span>
+            CONTACT
           </div>
+          <div style={{
+            width: "80px", height: "1px",
+            background: "linear-gradient(90deg, transparent, #63b3ff, transparent)",
+            margin: "0 auto 16px",
+          }} />
           <div style={{
             fontFamily: "var(--font-share-tech)",
-            fontSize: "13px", color: "rgba(255,255,255,0.4)",
-            letterSpacing: "1px", lineHeight: 1.8,
-            marginBottom: "32px",
+            fontSize: "12px", color: "rgba(255,255,255,0.3)",
+            textAlign: "center", letterSpacing: "2px",
+            marginBottom: "52px", textTransform: "uppercase",
           }}>
-            Want to be part of something bigger?<br />
-            Details on membership and upcoming missions — coming soon.
+            SRG Engineering College · Namakkal
           </div>
 
-          {/* Pulse indicator */}
+          {/* Transmission card */}
           <div style={{
-            display: "flex", alignItems: "center",
-            justifyContent: "center", gap: "8px",
+            background: "rgba(99,179,255,0.02)",
+            border: "1px dashed rgba(99,179,255,0.2)",
+            borderRadius: "16px", padding: "48px 32px",
+            textAlign: "center", marginBottom: "32px",
           }}>
             <div style={{
-              width: "8px", height: "8px",
-              background: "#63b3ff", borderRadius: "50%",
-              animation: "pulseDot 1.5s ease-in-out infinite",
-            }} />
-            <span style={{
-              fontFamily: "var(--font-share-tech)",
-              fontSize: "11px", color: "rgba(255,255,255,0.3)",
-              letterSpacing: "3px", textTransform: "uppercase",
+              fontSize: "36px", marginBottom: "20px",
+              display: "inline-block",
+              animation: "rotate 8s linear infinite",
             }}>
-              Signal Active · Watch This Space
-            </span>
-          </div>
-        </div>
-
-        {/* Info cards */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "16px", marginBottom: "48px",
-        }}>
-          {[
-            { icon: "🏫", label: "Institution", value: "SRG Engineering College" },
-            { icon: "📍", label: "Location", value: "Namakkal, Tamil Nadu" },
-            { icon: "🎓", label: "Departments", value: "CSE · IT · Cyber · AI&DS" },
-            { icon: "🚀", label: "Est.", value: "2025 · Still Standing" },
-          ].map((item) => (
-            <div key={item.label} className="contact-card">
-              <span style={{ fontSize: "20px", display: "block", marginBottom: "8px" }}>
-                {item.icon}
-              </span>
-              <div style={{
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "9px", letterSpacing: "2px",
-                color: "#63b3ff", textTransform: "uppercase",
-                marginBottom: "4px",
-              }}>
-                {item.label}
-              </div>
-              <div style={{
-                fontFamily: "var(--font-orbitron)",
-                fontSize: "11px", color: "rgba(255,255,255,0.7)",
-                letterSpacing: "1px",
-              }}>
-                {item.value}
-              </div>
+              📡
             </div>
-          ))}
-        </div>
+            <div style={{
+              fontFamily: "var(--font-orbitron)",
+              fontSize: "clamp(16px, 3vw, 24px)",
+              fontWeight: 700, color: "#fff",
+              letterSpacing: "2px", marginBottom: "16px",
+            }}>
+              ASTRANEX&apos;26 is built by students,<br />
+              <span style={{ color: "#63b3ff" }}>for students.</span>
+            </div>
+            <div style={{
+              fontFamily: "var(--font-share-tech)",
+              fontSize: "13px", color: "rgba(255,255,255,0.4)",
+              letterSpacing: "1px", lineHeight: 1.8,
+              marginBottom: "32px",
+            }}>
+              Want to be part of something bigger?<br />
+              Details on membership and upcoming missions — coming soon.
+            </div>
 
-        {/* Footer */}
-        <div style={{
-          borderTop: "1px solid rgba(99,179,255,0.08)",
-          paddingTop: "32px", textAlign: "center",
-        }}>
-          <div style={{
-            fontFamily: "var(--font-orbitron)",
-            fontSize: "20px", fontWeight: 900,
-            color: "#fff", letterSpacing: "4px",
-            marginBottom: "8px",
-            textShadow: "0 0 20px rgba(99,179,255,0.4)",
-          }}>
-            ASTRANEX<span style={{ color: "#63b3ff" }}>&apos;26</span>
+            {/* Pulse indicator */}
+            <div style={{
+              display: "flex", alignItems: "center",
+              justifyContent: "center", gap: "8px",
+            }}>
+              <div style={{
+                width: "8px", height: "8px",
+                background: "#63b3ff", borderRadius: "50%",
+                animation: "pulseDot 1.5s ease-in-out infinite",
+              }} />
+              <span style={{
+                fontFamily: "var(--font-share-tech)",
+                fontSize: "11px", color: "rgba(255,255,255,0.3)",
+                letterSpacing: "3px", textTransform: "uppercase",
+              }}>
+                Signal Active · Watch This Space
+              </span>
+            </div>
           </div>
+
+          {/* Info cards */}
           <div style={{
-            fontFamily: "var(--font-share-tech)",
-            fontSize: "11px", color: "rgba(255,255,255,0.25)",
-            letterSpacing: "2px", textTransform: "uppercase",
-            marginBottom: "16px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "16px", marginBottom: "48px",
           }}>
-            Every Skill Has a Stage
+            {[
+              { icon: "🏫", label: "Institution", value: "SRG Engineering College" },
+              { icon: "📍", label: "Location", value: "Namakkal, Tamil Nadu" },
+              { icon: "🎓", label: "Departments", value: "CSE · IT · Cyber · AI&DS" },
+              { icon: "🚀", label: "Est.", value: "2025 · Still Standing" },
+            ].map((item) => (
+              <div key={item.label} className="contact-card">
+                <span style={{ fontSize: "20px", display: "block", marginBottom: "8px" }}>
+                  {item.icon}
+                </span>
+                <div style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "9px", letterSpacing: "2px",
+                  color: "#63b3ff", textTransform: "uppercase",
+                  marginBottom: "4px",
+                }}>
+                  {item.label}
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-orbitron)",
+                  fontSize: "11px", color: "rgba(255,255,255,0.7)",
+                  letterSpacing: "1px",
+                }}>
+                  {item.value}
+                </div>
+              </div>
+            ))}
           </div>
+
+          {/* Footer */}
           <div style={{
-            fontFamily: "var(--font-share-tech)",
-            fontSize: "10px", color: "rgba(255,255,255,0.15)",
-            letterSpacing: "1px",
+            borderTop: "1px solid rgba(99,179,255,0.08)",
+            paddingTop: "32px", textAlign: "center",
           }}>
-            © 2025 ASTRANEX&apos;26 · Dept. of CSE, IT, Cyber Security & AI&DS<br />
-            SRG Engineering College, Namakkal
+            <div style={{
+              fontFamily: "var(--font-orbitron)",
+              fontSize: "20px", fontWeight: 900,
+              color: "#fff", letterSpacing: "4px",
+              marginBottom: "8px",
+              textShadow: "0 0 20px rgba(99,179,255,0.4)",
+            }}>
+              ASTRANEX<span style={{ color: "#63b3ff" }}>&apos;26</span>
+            </div>
+            <div style={{
+              fontFamily: "var(--font-share-tech)",
+              fontSize: "11px", color: "rgba(255,255,255,0.25)",
+              letterSpacing: "2px", textTransform: "uppercase",
+              marginBottom: "16px",
+            }}>
+              Every Skill Has a Stage
+            </div>
+            <div style={{
+              fontFamily: "var(--font-share-tech)",
+              fontSize: "10px", color: "rgba(255,255,255,0.15)",
+              letterSpacing: "1px",
+            }}>
+              © 2025 ASTRANEX&apos;26 · Dept. of CSE, IT, Cyber Security & AI&DS<br />
+              SRG Engineering College, Namakkal
+            </div>
           </div>
-        </div>
+
+        </ScrollReveal> {/* 👈 Closing ScrollReveal */}
       </div>
     </section>
   );

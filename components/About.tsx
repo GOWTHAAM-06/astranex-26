@@ -1,3 +1,5 @@
+import ScrollReveal from "@/components/ScrollReveal";
+
 export default function About() {
   return (
     <section
@@ -54,7 +56,8 @@ export default function About() {
       }} />
 
       <div style={{ position: "relative", zIndex: 2, maxWidth: "960px", width: "100%" }}>
-
+         <ScrollReveal delay={100}>
+     
         {/* Section label */}
         <div style={{
           fontFamily: "var(--font-share-tech)",
@@ -228,7 +231,9 @@ export default function About() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
       </div>
     </section>
+    
   );
 }

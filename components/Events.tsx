@@ -1,5 +1,6 @@
 "use client";
 import { completedEvents } from "@/data/events";
+import ScrollReveal from "@/components/ScrollReveal"; // 👈 Added ScrollReveal
 
 export default function Events() {
   return (
@@ -76,171 +77,174 @@ export default function Events() {
       }} />
 
       <div style={{ position: "relative", zIndex: 2 }}>
+        <ScrollReveal delay={100}> {/* 👈 Opening ScrollReveal */}
 
-        {/* Header */}
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "11px", letterSpacing: "4px",
-          color: "#63b3ff", textAlign: "center",
-          textTransform: "uppercase", marginBottom: "12px",
-        }}>
-          ◈ Mission Log ◈
-        </div>
-        <div style={{
-          fontFamily: "var(--font-orbitron)",
-          fontSize: "clamp(24px, 5vw, 42px)",
-          fontWeight: 900, color: "#fff",
-          textAlign: "center", letterSpacing: "4px",
-          marginBottom: "8px",
-          textShadow: "0 0 40px rgba(99,179,255,0.4)",
-        }}>
-          EVENTS
-        </div>
-        <div style={{
-          width: "80px", height: "1px",
-          background: "linear-gradient(90deg, transparent, #63b3ff, transparent)",
-          margin: "0 auto 16px",
-        }} />
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "12px", color: "rgba(255,255,255,0.3)",
-          textAlign: "center", letterSpacing: "2px",
-          marginBottom: "52px", textTransform: "uppercase",
-        }}>
-          Inaugural missions · ASTRANEX&apos;26 launch sequence
-        </div>
-
-        {/* Mission Cards */}
-        <div className="missions-grid">
-          {completedEvents.map((event) => (
-            <div
-              key={event.id}
-              className="mission-card"
-              style={{ borderColor: `${event.accent}22` }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = `${event.accent}66`;
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = `${event.accent}22`;
-              }}
-            >
-              {/* Top accent line */}
-              <div style={{
-                position: "absolute", top: 0, left: 0, right: 0,
-                height: "2px",
-                background: `linear-gradient(90deg, transparent, ${event.accent}, transparent)`,
-              }} />
-
-              {/* Mission number + status */}
-              <div style={{
-                display: "flex", alignItems: "center",
-                justifyContent: "space-between",
-                marginBottom: "16px",
-              }}>
-                <span style={{
-                  fontFamily: "var(--font-share-tech)",
-                  fontSize: "10px", letterSpacing: "3px",
-                  color: event.accent, textTransform: "uppercase",
-                }}>
-                  {event.missionNumber}
-                </span>
-                <span style={{
-                  fontFamily: "var(--font-share-tech)",
-                  fontSize: "8px", letterSpacing: "2px",
-                  padding: "3px 10px", borderRadius: "10px",
-                  textTransform: "uppercase",
-                  color: "#4ade80",
-                  border: "1px solid rgba(74,222,128,0.3)",
-                  background: "rgba(74,222,128,0.08)",
-                }}>
-                  Complete
-                </span>
-              </div>
-
-              {/* Icon */}
-              <span style={{ fontSize: "32px", marginBottom: "14px", display: "block" }}>
-                {event.icon}
-              </span>
-
-              {/* Title */}
-              <div style={{
-                fontFamily: "var(--font-orbitron)",
-                fontSize: "16px", fontWeight: 700,
-                color: "#fff", letterSpacing: "1px",
-                marginBottom: "6px",
-              }}>
-                {event.title}
-              </div>
-
-              {/* Codename */}
-              <div style={{
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "10px", color: event.accent,
-                letterSpacing: "2px", marginBottom: "14px",
-                textTransform: "uppercase",
-              }}>
-                {event.codename}
-              </div>
-
-              {/* Description */}
-              <div style={{
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "11px", color: "rgba(255,255,255,0.45)",
-                lineHeight: 1.7, letterSpacing: "0.5px",
-              }}>
-                {event.description}
-              </div>
-
-              {/* Footer */}
-              <div style={{
-                marginTop: "20px", paddingTop: "16px",
-                borderTop: "1px solid rgba(99,179,255,0.08)",
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "9px", color: "rgba(255,255,255,0.25)",
-                letterSpacing: "1px", textTransform: "uppercase",
-              }}>
-                {event.date}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Incoming Transmission */}
-        <div className="incoming-card">
+          {/* Header */}
           <div style={{
-            fontSize: "28px", marginBottom: "14px",
-            display: "inline-block",
-            animation: "rotate 4s linear infinite",
+            fontFamily: "var(--font-share-tech)",
+            fontSize: "11px", letterSpacing: "4px",
+            color: "#63b3ff", textAlign: "center",
+            textTransform: "uppercase", marginBottom: "12px",
           }}>
-            📡
+            ◈ Mission Log ◈
           </div>
           <div style={{
             fontFamily: "var(--font-orbitron)",
-            fontSize: "18px", fontWeight: 700,
-            color: "#fbbf24", letterSpacing: "3px",
+            fontSize: "clamp(24px, 5vw, 42px)",
+            fontWeight: 900, color: "#fff",
+            textAlign: "center", letterSpacing: "4px",
             marginBottom: "8px",
-            textShadow: "0 0 20px rgba(251,191,36,0.4)",
-            animation: "blink 2s ease-in-out infinite",
+            textShadow: "0 0 40px rgba(99,179,255,0.4)",
           }}>
-            INCOMING TRANSMISSION
+            EVENTS
           </div>
           <div style={{
+            width: "80px", height: "1px",
+            background: "linear-gradient(90deg, transparent, #63b3ff, transparent)",
+            margin: "0 auto 16px",
+          }} />
+          <div style={{
             fontFamily: "var(--font-share-tech)",
-            fontSize: "11px", color: "rgba(255,255,255,0.3)",
-            letterSpacing: "2px", textTransform: "uppercase",
-            lineHeight: 1.8,
+            fontSize: "12px", color: "rgba(255,255,255,0.3)",
+            textAlign: "center", letterSpacing: "2px",
+            marginBottom: "52px", textTransform: "uppercase",
           }}>
-            <span style={{
-              display: "inline-block",
-              width: "6px", height: "6px",
-              background: "#fbbf24", borderRadius: "50%",
-              marginRight: "6px", verticalAlign: "middle",
-              animation: "pulseDot 1.5s ease-in-out infinite",
-            }} />
-            Next mission is being planned by the crew<br />
-            Signal detected · Details loading · Stay tuned
+            Inaugural missions · ASTRANEX&apos;26 launch sequence
           </div>
-        </div>
+
+          {/* Mission Cards */}
+          <div className="missions-grid">
+            {completedEvents.map((event) => (
+              <div
+                key={event.id}
+                className="mission-card"
+                style={{ borderColor: `${event.accent}22` }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.borderColor = `${event.accent}66`;
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.borderColor = `${event.accent}22`;
+                }}
+              >
+                {/* Top accent line */}
+                <div style={{
+                  position: "absolute", top: 0, left: 0, right: 0,
+                  height: "2px",
+                  background: `linear-gradient(90deg, transparent, ${event.accent}, transparent)`,
+                }} />
+
+                {/* Mission number + status */}
+                <div style={{
+                  display: "flex", alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "16px",
+                }}>
+                  <span style={{
+                    fontFamily: "var(--font-share-tech)",
+                    fontSize: "10px", letterSpacing: "3px",
+                    color: event.accent, textTransform: "uppercase",
+                  }}>
+                    {event.missionNumber}
+                  </span>
+                  <span style={{
+                    fontFamily: "var(--font-share-tech)",
+                    fontSize: "8px", letterSpacing: "2px",
+                    padding: "3px 10px", borderRadius: "10px",
+                    textTransform: "uppercase",
+                    color: "#4ade80",
+                    border: "1px solid rgba(74,222,128,0.3)",
+                    background: "rgba(74,222,128,0.08)",
+                  }}>
+                    Complete
+                  </span>
+                </div>
+
+                {/* Icon */}
+                <span style={{ fontSize: "32px", marginBottom: "14px", display: "block" }}>
+                  {event.icon}
+                </span>
+
+                {/* Title */}
+                <div style={{
+                  fontFamily: "var(--font-orbitron)",
+                  fontSize: "16px", fontWeight: 700,
+                  color: "#fff", letterSpacing: "1px",
+                  marginBottom: "6px",
+                }}>
+                  {event.title}
+                </div>
+
+                {/* Codename */}
+                <div style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "10px", color: event.accent,
+                  letterSpacing: "2px", marginBottom: "14px",
+                  textTransform: "uppercase",
+                }}>
+                  {event.codename}
+                </div>
+
+                {/* Description */}
+                <div style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "11px", color: "rgba(255,255,255,0.45)",
+                  lineHeight: 1.7, letterSpacing: "0.5px",
+                }}>
+                  {event.description}
+                </div>
+
+                {/* Footer */}
+                <div style={{
+                  marginTop: "20px", paddingTop: "16px",
+                  borderTop: "1px solid rgba(99,179,255,0.08)",
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "9px", color: "rgba(255,255,255,0.25)",
+                  letterSpacing: "1px", textTransform: "uppercase",
+                }}>
+                  {event.date}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Incoming Transmission */}
+          <div className="incoming-card">
+            <div style={{
+              fontSize: "28px", marginBottom: "14px",
+              display: "inline-block",
+              animation: "rotate 4s linear infinite",
+            }}>
+              📡
+            </div>
+            <div style={{
+              fontFamily: "var(--font-orbitron)",
+              fontSize: "18px", fontWeight: 700,
+              color: "#fbbf24", letterSpacing: "3px",
+              marginBottom: "8px",
+              textShadow: "0 0 20px rgba(251,191,36,0.4)",
+              animation: "blink 2s ease-in-out infinite",
+            }}>
+              INCOMING TRANSMISSION
+            </div>
+            <div style={{
+              fontFamily: "var(--font-share-tech)",
+              fontSize: "11px", color: "rgba(255,255,255,0.3)",
+              letterSpacing: "2px", textTransform: "uppercase",
+              lineHeight: 1.8,
+            }}>
+              <span style={{
+                display: "inline-block",
+                width: "6px", height: "6px",
+                background: "#fbbf24", borderRadius: "50%",
+                marginRight: "6px", verticalAlign: "middle",
+                animation: "pulseDot 1.5s ease-in-out infinite",
+              }} />
+              Next mission is being planned by the crew<br />
+              Signal detected · Details loading · Stay tuned
+            </div>
+          </div>
+
+        </ScrollReveal> {/* 👈 Closing ScrollReveal */}
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { coreTeam, missionTeam } from "@/data/committee";
+import ScrollReveal from "@/components/ScrollReveal"; 
 
 export default function Committee() {
   return (
@@ -97,130 +98,133 @@ export default function Committee() {
       }} />
 
       <div style={{ position: "relative", zIndex: 2 }}>
+        <ScrollReveal delay={100}> {/* 👈 Opening Scroll Reveal Tag */}
 
-        {/* Header */}
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "11px", letterSpacing: "4px",
-          color: "#63b3ff", textAlign: "center",
-          textTransform: "uppercase", marginBottom: "12px",
-        }}>
-          ◈ Mission Command ◈
-        </div>
-        <div style={{
-          fontFamily: "var(--font-orbitron)",
-          fontSize: "clamp(24px, 5vw, 42px)",
-          fontWeight: 900, color: "#fff",
-          textAlign: "center", letterSpacing: "4px",
-          marginBottom: "8px",
-          textShadow: "0 0 40px rgba(99,179,255,0.4)",
-        }}>
-          THE CREW
-        </div>
-        <div style={{
-          width: "80px", height: "1px",
-          background: "linear-gradient(90deg, transparent, #63b3ff, transparent)",
-          margin: "0 auto 16px",
-        }} />
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "12px", color: "rgba(255,255,255,0.3)",
-          textAlign: "center", letterSpacing: "2px",
-          marginBottom: "52px", textTransform: "uppercase",
-        }}>
-          16 members · 4 departments · 1 mission
-        </div>
+          {/* Header */}
+          <div style={{
+            fontFamily: "var(--font-share-tech)",
+            fontSize: "11px", letterSpacing: "4px",
+            color: "#63b3ff", textAlign: "center",
+            textTransform: "uppercase", marginBottom: "12px",
+          }}>
+            ◈ Mission Command ◈
+          </div>
+          <div style={{
+            fontFamily: "var(--font-orbitron)",
+            fontSize: "clamp(24px, 5vw, 42px)",
+            fontWeight: 900, color: "#fff",
+            textAlign: "center", letterSpacing: "4px",
+            marginBottom: "8px",
+            textShadow: "0 0 40px rgba(99,179,255,0.4)",
+          }}>
+            THE CREW
+          </div>
+          <div style={{
+            width: "80px", height: "1px",
+            background: "linear-gradient(90deg, transparent, #63b3ff, transparent)",
+            margin: "0 auto 16px",
+          }} />
+          <div style={{
+            fontFamily: "var(--font-share-tech)",
+            fontSize: "12px", color: "rgba(255,255,255,0.3)",
+            textAlign: "center", letterSpacing: "2px",
+            marginBottom: "52px", textTransform: "uppercase",
+          }}>
+            16 members · 4 departments · 1 mission
+          </div>
 
-        {/* Core 7 */}
-        <div className="crew-grid">
-          {coreTeam.map((member) => (
-            <div
-              key={member.name}
-              className={`crew-card ${member.isVP ? "crew-card-vp" : ""}`}
-            >
-              {member.isVP && <div className="scan-line" />}
-              {member.isVP && (
+          {/* Core 7 */}
+          <div className="crew-grid">
+            {coreTeam.map((member) => (
+              <div
+                key={member.name}
+                className={`crew-card ${member.isVP ? "crew-card-vp" : ""}`}
+              >
+                {member.isVP && <div className="scan-line" />}
+                {member.isVP && (
+                  <div style={{
+                    position: "absolute", top: "12px", right: "12px",
+                    fontFamily: "var(--font-share-tech)",
+                    fontSize: "8px", letterSpacing: "2px",
+                    background: "rgba(99,179,255,0.15)",
+                    border: "1px solid rgba(99,179,255,0.4)",
+                    color: "#63b3ff", padding: "3px 8px",
+                    borderRadius: "10px", textTransform: "uppercase",
+                  }}>
+                    You
+                  </div>
+                )}
+                <span style={{ fontSize: "22px", marginBottom: "10px", display: "block" }}>
+                  {member.icon}
+                </span>
                 <div style={{
-                  position: "absolute", top: "12px", right: "12px",
                   fontFamily: "var(--font-share-tech)",
-                  fontSize: "8px", letterSpacing: "2px",
-                  background: "rgba(99,179,255,0.15)",
-                  border: "1px solid rgba(99,179,255,0.4)",
-                  color: "#63b3ff", padding: "3px 8px",
-                  borderRadius: "10px", textTransform: "uppercase",
+                  fontSize: "9px", letterSpacing: "3px",
+                  color: "#63b3ff", textTransform: "uppercase",
+                  marginBottom: "6px",
                 }}>
-                  You
+                  {member.position}
                 </div>
-              )}
-              <span style={{ fontSize: "22px", marginBottom: "10px", display: "block" }}>
-                {member.icon}
-              </span>
-              <div style={{
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "9px", letterSpacing: "3px",
-                color: "#63b3ff", textTransform: "uppercase",
-                marginBottom: "6px",
-              }}>
-                {member.position}
+                <div style={{
+                  fontFamily: "var(--font-orbitron)",
+                  fontSize: "15px", fontWeight: 700,
+                  color: "#fff", marginBottom: "4px",
+                  letterSpacing: "1px",
+                }}>
+                  {member.name}
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "10px", color: "rgba(255,255,255,0.4)",
+                  letterSpacing: "1px", marginBottom: "10px",
+                  fontStyle: "italic",
+                }}>
+                  {member.missionRole}
+                </div>
+                <span style={{
+                  fontFamily: "var(--font-share-tech)",
+                  fontSize: "9px",
+                  background: "rgba(99,179,255,0.1)",
+                  border: "1px solid rgba(99,179,255,0.2)",
+                  color: "#63b3ff", padding: "3px 8px",
+                  borderRadius: "20px", display: "inline-block",
+                  letterSpacing: "1px",
+                }}>
+                  {member.year}
+                </span>
               </div>
-              <div style={{
-                fontFamily: "var(--font-orbitron)",
-                fontSize: "15px", fontWeight: 700,
-                color: "#fff", marginBottom: "4px",
-                letterSpacing: "1px",
-              }}>
-                {member.name}
+            ))}
+          </div>
+
+          {/* Mission Team */}
+          <div style={{
+            fontFamily: "var(--font-orbitron)",
+            fontSize: "14px", letterSpacing: "3px",
+            color: "rgba(255,255,255,0.4)", textAlign: "center",
+            textTransform: "uppercase", margin: "40px 0 20px",
+          }}>
+            ◈ Mission Team ◈
+          </div>
+
+          <div className="team-grid">
+            {missionTeam.map((member) => (
+              <div key={member.name} className="team-pill">
+                {member.name} · {member.year}
               </div>
-              <div style={{
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "10px", color: "rgba(255,255,255,0.4)",
-                letterSpacing: "1px", marginBottom: "10px",
-                fontStyle: "italic",
-              }}>
-                {member.missionRole}
-              </div>
-              <span style={{
-                fontFamily: "var(--font-share-tech)",
-                fontSize: "9px",
-                background: "rgba(99,179,255,0.1)",
-                border: "1px solid rgba(99,179,255,0.2)",
-                color: "#63b3ff", padding: "3px 8px",
-                borderRadius: "20px", display: "inline-block",
-                letterSpacing: "1px",
-              }}>
-                {member.year}
-              </span>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Mission Team */}
-        <div style={{
-          fontFamily: "var(--font-orbitron)",
-          fontSize: "14px", letterSpacing: "3px",
-          color: "rgba(255,255,255,0.4)", textAlign: "center",
-          textTransform: "uppercase", margin: "40px 0 20px",
-        }}>
-          ◈ Mission Team ◈
-        </div>
+          {/* Bottom line */}
+          <div style={{
+            fontFamily: "var(--font-share-tech)",
+            fontSize: "10px", color: "rgba(255,255,255,0.25)",
+            textAlign: "center", marginTop: "32px",
+            letterSpacing: "2px", textTransform: "uppercase",
+          }}>
+            ◈ In ASTRANEX&apos;26 — there are no winners or losers. Only crew. ◈
+          </div>
 
-        <div className="team-grid">
-          {missionTeam.map((member) => (
-            <div key={member.name} className="team-pill">
-              {member.name} · {member.year}
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom line */}
-        <div style={{
-          fontFamily: "var(--font-share-tech)",
-          fontSize: "10px", color: "rgba(255,255,255,0.25)",
-          textAlign: "center", marginTop: "32px",
-          letterSpacing: "2px", textTransform: "uppercase",
-        }}>
-          ◈ In ASTRANEX&apos;26 — there are no winners or losers. Only crew. ◈
-        </div>
+        </ScrollReveal> 
       </div>
     </section>
   );

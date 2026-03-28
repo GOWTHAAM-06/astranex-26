@@ -22,3 +22,14 @@ body {
   background: #63b3ff44;
   border-radius: 2px;
 }
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
