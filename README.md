@@ -36,3 +36,12 @@ npm install
 
 # Start the tactical interface
 npm run dev
+
+---
+
+## 📈 PRODUCTION STATUS & IMPACT
+
+* **Live Deployment:** [astranex-26.vercel.app](https://astranex-26.vercel.app)
+* **Status:** Core frontend digital infrastructure completely delivered and deployed live for the **ASTRANEX '26 Symposium**. 
+* **Real-World Impact:** Served as the official facing interface for student registration, event tracking (including logo design and AI photo editing), and internal event committee coordination.
+* **Engineering Takeaway:** Successfully managed production-level asset loading, optimized Framer Motion animations to maintain a strict 60 FPS mobile rendering speed, and handled deployment pipelines through Vercel.
